@@ -1,0 +1,45 @@
+//Requisição de Filmes
+@baseUrl = http://localhost:4000
+
+###
+//Obtendo todos os filmes
+GET {{baseUrl}}/filmes
+Content-Type: application/json
+
+###
+//Inserindo um novo filme
+POST {{baseUrl}}/filmes
+Content-Type: application/json
+
+{
+    "nome": "Star Wars: Episódio IX",
+    "sinopse": "Com o retorno do Imperador Palpatine, a Resistência toma a frente da batalha. Treinando para ser uma completa Jedi, Rey se encontra em conflito com passado e futuro, e teme pelas respostas que pode conseguir com Kylo Ren.",
+    "diretor": "J. J. Abrams",
+    "codigobarra" : "1242265138225",
+    "preco" : "45.90"
+}
+
+###
+@id = 5fad8fd659fd082860d5de7b
+//Obtendo um filme pelo id
+GET {{baseUrl}}/filmes/{{id}}
+Content-Type: application/json
+
+###
+//Removendo o filme pelo id
+DELETE {{baseUrl}}/filmes/{{id}}
+Content-Type: application/json
+
+###
+//Alterando um filme
+PUT {{baseUrl}}/filmes
+Content-Type: application/json
+
+{
+    "_id": "5fad92d259fd082860d5de80",
+    "nome": "Vingadores: Ultimato",
+    "sinopse": "Após Thanos eliminar metade das criaturas vivas, os Vingadores têm de lidar com a perda de amigos e entes queridos. Com Tony Stark vagando perdido no espaço sem água e comida, Steve Rogers e Natasha Romanov lideram a resistência contra o titã louco.",
+    "diretor": "Joe Russo, Antonhy Russo",
+    "codigobarra" : "1234522890124",
+    "preco" : "39.90"
+}
